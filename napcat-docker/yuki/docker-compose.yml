@@ -20,4 +20,4 @@ services:
     volumes:
       - ./napcat/config:/app/napcat/config
       - ./ntqq:/app/.config/QQ
-      - /home/ubuntu/yuki:/home/ubuntu/yuki # 项目路径
+      - /home/ubuntu/yuki:/home/ubuntu/yuki # 填写项目实际路径
