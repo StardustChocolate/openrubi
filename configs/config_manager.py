@@ -9,7 +9,6 @@ class ConfigManager:
     def __init__(self):
         # 初始化所有配置属性
         self.config = None           # 总配置
-        self.config_name = None      # 配置自身文件名
         self.info = None             # 基本信息
         self.port = None             # 端口
         self.token = None            # ws服务器token
@@ -34,7 +33,6 @@ class ConfigManager:
     def load_config(self, config_name):
         """加载配置文件并初始化相关属性"""
         try:
-            self.config_name = config_name
             base_path = Path("./configs")
             full_path = base_path / config_name
             if not full_path.is_file():

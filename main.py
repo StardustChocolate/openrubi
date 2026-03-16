@@ -31,7 +31,7 @@ def main():
     config_manager.load_config(args.config)
 
     # 设置日志
-    logger = setup_logger(config_manager.config_name)
+    logger = setup_logger(config_manager.info["self_name_en"])
 
     # 启动机器人
     if config_manager.token:

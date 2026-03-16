@@ -5,6 +5,8 @@ from logging.handlers import RotatingFileHandler
 
 def setup_logger(name: str = "Yuki"):
     """设置日志"""
+    if not name:
+        name = "Yuki"
     log_dir = Path(f'./logs/{name}')
     log_dir.mkdir(parents=True, exist_ok=True)  # parents=True 可以创建多级目录
     
