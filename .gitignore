@@ -218,19 +218,16 @@ temp/*
 !temp/.gitkeep
 
 # 非必要的图片
-# arkrecode/backgrounds/
-# arkrecode/bonds/background/
-# arkrecode/bonds/icon/
-# arkrecode/bonds/images/
-# arkrecode/members/background/
-# arkrecode/members/character/
-# arkrecode/members/faction/
-# arkrecode/members/icon/
-# arkrecode/members/skill/
-# arkrecode/members/status/
-
-# yuki忽略
-arkrecode/
+arkrecode/backgrounds/
+arkrecode/bonds/background/
+arkrecode/bonds/icon/
+arkrecode/bonds/images/
+arkrecode/members/background/
+arkrecode/members/character/
+arkrecode/members/faction/
+arkrecode/members/icon/
+arkrecode/members/skill/
+arkrecode/members/status/
 
 # 配置文件
 configs/*
@@ -238,11 +235,16 @@ configs/*
 !configs/config_manager.py
 !configs/config.yaml
 
+# 更新日志历史
+doc/update_log_history.txt
+
 # docker运行数据
 napcat-docker/**/napcat/
 napcat-docker/**/ntqq/
 
-# yuki运行数据
+# rubi运行数据
 data/
 
-# !config/.gitkeep  # 如果需要保留空文件夹
+# 其它工具
+utils/make_gallery.py
+utils/make_gallery_bonds.py

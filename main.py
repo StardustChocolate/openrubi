@@ -43,7 +43,7 @@ def main():
 
 def parse_arguments():
     """解析命令行参数"""
-    parser = argparse.ArgumentParser(description='Yuki Bot')
+    parser = argparse.ArgumentParser(description='OpenRubi')
     parser.add_argument('-c', '--config', default='config.yaml', help='指定配置文件路径')
     return parser.parse_args()
 

@@ -1,0 +1,23 @@
+# docker-compose.yml
+# NAPCAT_UID=$(id -u) NAPCAT_GID=$(id -g) docker-compose -f ./docker-compose.yml up -d
+# NAPCAT_UID=$(id -u) NAPCAT_GID=$(id -g) docker compose -f ./docker-compose.yml up -d
+services:
+  napcat:
+    image: mlikiowa/napcat-docker:latest
+    container_name: rubi
+    restart: always
+    network_mode: bridge
+    mac_address: 02:42:ac:11:00:00  # 添加MAC地址固化配置
+    
+    environment:
+      - NAPCAT_UID=${NAPCAT_UID}
+      - NAPCAT_GID=${NAPCAT_GID}
+    
+    ports:
+      - 3300:3001
+      - 6300:6099
+    
+    volumes:
+      - ./napcat/config:/app/napcat/config
+      - ./ntqq:/app/.config/QQ
+      - /home/ubuntu/openrubi:/home/ubuntu/openrubi

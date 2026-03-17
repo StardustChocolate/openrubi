@@ -1,37 +1,34 @@
 <div align="center">
 
-# Yuki(雪)酱 🌟
+# OpenRubi 🌟
 
-<img src="./images/yuki/yuki.png" width="200" alt="Yuki">
+<img src="./images/openrubi.png" width="200" alt="Yuki">
 
-一个简易的 QQ 机器人终端实现，定制你的AI猫娘。
+星陨计划露比机器人，基于 Python + NapCat 制作，Fork自Yuki
 
 [简体中文](./README.md) | [English](./README.en.md)
 
-[![Python Version](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-GPL%20v3-red.svg)](./LICENSE)
-[![NapCat](https://img.shields.io/badge/Built%20with-NapCat-27A7E7.svg)](https://github.com/NapNeko/NapCatQQ)
-[![QQ Group](https://img.shields.io/badge/QQ%20Group-512152733-5865F2.svg)](https://qm.qq.com/q/tE6OmKvDhu)
+[![Python Version](https://img.shields.io/badge/Python-3.8+-blue.svg?style=flat-square)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-GPL%20v3-red.svg?style=flat-square)](./LICENSE)
+[![NapCat](https://img.shields.io/badge/Docker-NapCat-27A7E7.svg?style=flat-square)](https://github.com/NapNeko/NapCatQQ)
+[![Yuki](https://img.shields.io/badge/Fork-yuki-4BC51D?style=flat-square)](https://github.com/yingxueOvO/yuki)
+[![OneBot](https://img.shields.io/badge/OneBot-11-black?style=flat-square)](https://github.com/howmanybots/onebot)
+[![QQ Group](https://img.shields.io/badge/QQ%20Group-1032070842-5865F2.svg?style=flat-square)](https://qm.qq.com/q/YsvXane7Wq)
 
 </div>
 
 ---
 
-## 🍀 前言
-
-这是一个早期项目，自Mirai时代以来断断续续维护至今，十分感谢Mirai、go-cqhttp、Lagrange、Shamrock、NapCat等开源框架作者们的奉献，是你们让此项目得以实现
-
-⚠️ 注意：本项目仅供学习交流使用，本项目按“原样”和“可用性”提供，不附带任何明示或暗示的保证。使用本项目的风险由您自行承担。
-
 ## ✨ 功能特性
 
-- 🎯 **插件化架构** - 支持动态加载插件，轻松扩展功能
-- 💬 **聊天** - 默认调用 DeepSeek 模型，支持多轮对话，可自行修改代码以使用其它模型
-- 🔄 **异步处理** - 基于 asyncio 的高效事件循环
+- 🔍 **图鉴查询** - 通过名称或别称查询角色、羁绊图鉴，支持模糊匹配
+- ⏱️ **速度计算** - 团战测速，详见帮助说明
+- 🎫 **兑换码** - 查询兑换码
+- 💬 **聊天** - 内置露比性格，可自定义调整
 - 🎛️ **灵活配置** - YAML 配置文件，支持多开
-- 👥 **群宠** - 戳一戳、入群欢迎、早安、一言、疯狂星期四、猪猪测试等等丰富的整活功能
+- 🎯 **插件化架构** - 轻松扩展功能
+- 🎉 **Yuki功能** - 戳一戳、入群欢迎、早安、一言、疯狂星期四、猪猪测试等等丰富的整活功能
 
----
 
 ## 📦 快速开始
 
@@ -43,3 +40,16 @@
 - `config.yml` 中修改自己的配置
 - 启用环境后 `python main.py` 运行即可；`-c` 可以指定配置文件，不设默认用`config.yml`
 
+## ⚠️注意
+
+- 本项目仅供**学习、研究和参考**用途，不构成任何形式的正式建议或承诺。
+
+- 本软件按“**原样**”（AS IS）提供，不附带任何明示或暗示的担保，包括但不限于适销性、特定用途适用性及不侵权的担保。作者或版权持有人不对软件的使用或其他处理方式所产生的结果负责。
+
+- 在任何情况下，即使事先被告知可能发生损害，作者或贡献者均不对因使用本软件或无法使用本软件而引起的任何索赔、损害或其他责任负责，无论是合同诉讼、侵权行为还是其他原因。
+
+- 如果本项目中包含指向第三方网站、资源或代码的链接，这些内容仅供参考，作者不对其准确性、合法性或安全性承担任何责任。
+
+- 用户应自行确保其使用本项目的行为符合所在国家/地区的法律法规。因使用本项目而产生的任何法律风险由用户自行承担。
+
+- 若本项目无意中侵犯了任何个人或实体的权益，请通过 [Issue] 或邮件联系我们，我们将在核实后第一时间处理（如删除相关内容）。

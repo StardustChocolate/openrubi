@@ -3,10 +3,10 @@ from pathlib import Path
 from datetime import datetime
 from logging.handlers import RotatingFileHandler
 
-def setup_logger(name: str = "Yuki"):
+def setup_logger(name: str = "rubi"):
     """设置日志"""
     if not name:
-        name = "Yuki"
+        name = "rubi"
     log_dir = Path(f'./logs/{name}')
     log_dir.mkdir(parents=True, exist_ok=True)  # parents=True 可以创建多级目录
     

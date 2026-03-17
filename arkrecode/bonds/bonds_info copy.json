@@ -1,0 +1,33 @@
+[
+    {
+        "id": "A0001",
+        "name": "驰骋的快感",
+        "e7_name": "神圣牺牲",
+        "other_names": [
+            "Pleasure of Exploration",
+            "复活甲"
+        ],
+        "Related": "艾瑞儿",
+        "Class": "Defender",
+        "Stars": 5,
+        "Released": "2023-11-01",
+        "ATK": {
+            "Base": 9,
+            "Max": 117
+        },
+        "HP": {
+            "Base": 76,
+            "Max": 988
+        },
+        "Description": "一身轻装、驰骋四方的她，期望你能够如同对待爱车那般，好好地疼爱她，让两人一同享受奔驰的快感。",
+        "Skill": "死亡时，有[50-100%]机率使自身以25%生命力复活，并附加<护盾>(1回合)，护盾效果根据自己最大生命力等比提升。发动1次后不会再次发动",
+        "Multipliers": {
+            "Normal": {
+                "Shield":{
+                    "Max HP": 0.3
+                }
+            }
+        },
+        "Notes": ""
+    }
+]
