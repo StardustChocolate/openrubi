@@ -43,8 +43,9 @@ class Hitokoto(BasePlugin):
             return False
 
         # 关键词判断
-        if msg.startswith("一言"):
-            select = msg.lstrip('一言：:') # 截取选择的分类
+        msg.startswith
+        if msg.startswith(("一言：", "一言:")):
+            select = msg[3:]  # 截取选择的分类
 
             # 检查开关
             if not await self.check_enable(data, bot):
