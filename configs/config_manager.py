@@ -10,8 +10,10 @@ class ConfigManager:
         # 初始化所有配置属性
         self.config = None           # 总配置
         self.info = None             # 基本信息
-        self.port = None             # 端口
-        self.token = None            # ws服务器token
+        self.ws_port = None          # ws服务器端口
+        self.webui_port = None       # webui服务器端口
+        self.ws_token = None         # ws服务器token
+        self.webui_token = None      # webui服务器token
         self.api_key = None          # 大模型api-key
         self.path = None             # 路径
         self.self_info = None        # 自身信息
@@ -43,9 +45,11 @@ class ConfigManager:
             with open(full_path, 'r', encoding='utf-8') as f:
                 self.config = yaml.safe_load(f)  # 使用更安全的加载方式
             self.info = self.config.get("info")
-            self.port = self.config.get("port")
             self.api_key = self.config.get("api_key")
-            self.token = self.config.get("token")
+            self.ws_port = self.config.get("ws_port")
+            self.webui_port = self.config.get("webui_port")
+            self.ws_token = self.config.get("ws_token")
+            self.webui_token = self.config.get("webui_token")
             self.path = self.config.get('path')
             self.doc_path = f"./data/{full_path.stem}"  # 直接取配置文件的名字
             # 初始化自身信息
@@ -137,6 +141,9 @@ class ConfigManager:
             change_flag = True
         if "group_register" not in self.self_info:
             self.self_info["group_register"] = []                       # 群聊登记(由于QQ存在人少群邀请无视同意的情况，故在此设置保护，未登记的群聊在进群后将自动退群)
+            change_flag = True
+        if "add_friend_method" not in self.self_info:
+            self.self_info["add_friend_method"] = "default"             # 添加好友方式(默认不处理)
             change_flag = True
         if change_flag:
             await self.save_self_info() # 若有修改则启动保存

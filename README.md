@@ -32,6 +32,17 @@
 
 ## 📦 快速开始
 
+### 一键式启动（推荐）
+
+- 使用 `docker pull mlikiowa/napcat-docker` 拉取 NapCat Docker
+- 根据 `requirements.txt` 文件配置 python 环境
+- `configs/config.yml` 中修改自己的配置，也可自己新建配置
+- 运行`python main.py` 、`-c`可指定其它配置文件
+- docker启动后使用webui登录
+- 登录成功后等待自动重连即可
+
+### 旧版方法
+
 - 使用 `docker pull mlikiowa/napcat-docker` 拉取 NapCat Docker
 - 配置 `docker-compose.yml` 文件中的 `volumes` 最后一行映射路径改为下载后本项目的实际位置
 - `NAPCAT_UID=$(id -u) NAPCAT_GID=$(id -g) docker compose -f ./docker-compose.yml up -d` 启动docker

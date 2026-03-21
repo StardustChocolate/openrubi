@@ -5,6 +5,7 @@ import argparse
 from core.bot_client import QQBotClient
 from utils.logger import setup_logger, get_logger
 from configs.config_manager import config_manager
+from core.docker_manager import docker_manager
 
 class QQBot:
     def __init__(self, ws_url: str = "ws://127.0.0.1:3001/ws"):
@@ -33,11 +34,21 @@ def main():
     # 设置日志
     logger = setup_logger(config_manager.info["self_name_en"])
 
+    # 启动Docker
+    docker_manager.init_docker()
+    docker_manager.start_docker()
+
+    # 等待启动并获取二维码
+    pass
+
+    # 初始化napcat
+    docker_manager.init_napcat()
+
     # 启动机器人
-    if config_manager.token:
-        ws_url = f"ws://127.0.0.1:{config_manager.port}/ws?access_token={config_manager.token}"
+    if config_manager.ws_token:
+        ws_url = f"ws://127.0.0.1:{config_manager.ws_port}/ws?access_token={config_manager.ws_token}"
     else:
-        ws_url = f"ws://127.0.0.1:{config_manager.port}/ws"
+        ws_url = f"ws://127.0.0.1:{config_manager.ws_port}/ws"
     bot = QQBot(ws_url)
     asyncio.run(bot.start())
 

@@ -4,7 +4,7 @@
 
 <img src="./images/openrubi.png" width="200" alt="Yuki">
 
-A Rubi robot for the Starfall Project, built with Python + NapCat, forked from Yuki
+Rubi Bot for Starfall Chronicles, built with Python + NapCat, forked from Yuki
 
 [简体中文](./README.md) | [English](./README.en.md)
 
@@ -21,35 +21,45 @@ A Rubi robot for the Starfall Project, built with Python + NapCat, forked from Y
 
 ## ✨ Features
 
-- 🔍 **Encyclopedia Query** - Query character and bond encyclopedias by name or alias, with fuzzy matching support
-- ⏱️ **Speed Calculation** - Guild battle speed calculation, see help for details
+- 🔍 **Encyclopedia Query** - Search for character and bond entries by name or alias, with fuzzy matching support
+- ⏱️ **Speed Calculator** - Guild battle speed testing; see help for details
 - 🎫 **Redemption Codes** - Query redemption codes
 - 💬 **Chat** - Built-in Rubi personality, customizable
-- 🎛️ **Flexible Configuration** - YAML configuration file, supports multi-instance operation
+- 🎛️ **Flexible Configuration** - YAML configuration files, supports multiple instances
 - 🎯 **Plugin Architecture** - Easily extend functionality
-- 🎉 **Yuki Features** - Poke, welcome messages, morning greetings, quotes, KFC quotes, Piggy test, and more fun features
-
+- 🎉 **Yuki Features** - Poke, welcome messages, morning greetings, quotes, Crazy Thursday, Piggy Test, and many other fun plugins
 
 ## 📦 Quick Start
 
+### One-Click Start (Recommended)
+
 - Pull the NapCat Docker image using `docker pull mlikiowa/napcat-docker`
-- In the `docker-compose.yml` file, change the last line of the `volumes` mapping path to the actual location of the project after downloading
+- Configure the Python environment based on the `requirements.txt` file
+- Modify your own configuration in `configs/config.yml`; you can also create a new configuration file
+- Run `python main.py` ; use `-c` to specify a different configuration file
+- After starting Docker, log in using the web UI
+- Once logged in successfully, wait for the automatic reconnection
+
+### Legacy Method
+
+- Pull the NapCat Docker image using `docker pull mlikiowa/napcat-docker`
+- In the `docker-compose.yml` file, change the last line of the `volumes` mapping path to the actual location of the downloaded project
 - Start Docker with `NAPCAT_UID=$(id -u) NAPCAT_GID=$(id -g) docker compose -f ./docker-compose.yml up -d`
-- Log in to your account using the webui and configure the websocket server
-- Set up the Python environment according to the `requirements.txt` file
+- Log in to your account using the web UI and configure the WebSocket server
+- Configure the Python environment based on the `requirements.txt` file
 - Modify your configuration in `config.yml`
-- Activate the environment and run with `python main.py`; use `-c` to specify a configuration file (defaults to `config.yml` if not specified)
+- After activating the environment, run `python main.py` ; use `-c` to specify a configuration file; if not set, `config.yml` is used by default
 
-## ⚠️ Important Notes
+## ⚠️ Disclaimer
 
-- This project is provided for **learning, research, and reference purposes only** and does not constitute any form of official advice or commitment.
+- This project is for **learning, research, and reference purposes only** and does not constitute any form of formal advice or commitment.
 
-- This software is provided "**AS IS**", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event shall the authors or copyright holders be liable for any claim, damages, or other liability arising from, out of, or in connection with the software or the use or other dealings in the software.
+- This software is provided "**AS IS**", without any express or implied warranties, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement. The author or copyright holders shall not be liable for any results arising from the use of this software or other methods of handling it.
 
-- In no event shall the authors or contributors be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software, even if advised of the possibility of such damages.
+- In no event shall the authors or contributors be liable for any claim, damages, or other liability arising from the use of or inability to use this software, whether in contract, tort, or otherwise, even if advised of the possibility of such damage.
 
-- If this project contains links to third-party websites, resources, or code, these are for reference only. The authors assume no responsibility for their accuracy, legality, or security.
+- If this project contains links to third-party websites, resources, or code, they are provided for reference only. The author assumes no responsibility for their accuracy, legality, or security.
 
-- Users are responsible for ensuring their use of this project complies with the laws and regulations of their country/region. Any legal risks arising from the use of this project are borne solely by the user.
+- Users are solely responsible for ensuring their use of this project complies with the laws and regulations of their country/region. Any legal risks arising from the use of this project shall be borne by the user.
 
-- If this project inadvertently infringes upon any individual or entity's rights, please contact us via [Issue] or email. We will verify and promptly address the matter (e.g., remove relevant content).
+- If this project inadvertently infringes upon the rights of any individual or entity, please contact us via [Issue] or email. We will verify and address the issue promptly (e.g., remove the relevant content).

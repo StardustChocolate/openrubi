@@ -1,6 +1,7 @@
 
 from plugins.base_plugin import BasePlugin
 from plugins.update_logs import get_update
+from configs.config_manager import config_manager
 
 class AutoApproval(BasePlugin):
     """自动审批插件"""
@@ -16,12 +17,18 @@ class AutoApproval(BasePlugin):
     async def on_request(self, data, bot) -> bool:
         """处理请求事件"""
         if data.get("request_type") == "friend" :    # 好友请求
-            # 可以自定义过滤条件，当前默认为同意
+            self_info = await config_manager.get_self_info()
+            # 可以自定义过滤条件，默认为不处理
+            if self_info.get("add_friend_method") == "default":     # 默认不处理
+                return True
+            elif self_info.get("add_friend_method") == "allow_any": # 允许任何人添加
+                approve = True
+            
             await bot.api_client.call_api(
                 action="set_friend_add_request",
                 params = {
                     "flag": data.get("flag"),
-                    "approve": True,
+                    "approve": approve,
                     "remark": ""
                 }
             )
