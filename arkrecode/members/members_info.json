@@ -16937,6 +16937,7 @@
         "e7_name": "残影的菲奥雷托",
         "other_names": [
             "Spider Lily Julia",
+            "彼岸花",
             "大哥"
         ],
         "Attribute": "Dark",
@@ -17072,7 +17073,23 @@
                 "Astrogen": "1",
                 "Morale": "+20",
                 "Cooldown": "1",
-                "Multipliers": {},
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": [
+                            1,
+                            2
+                        ],
+                        "Max HP": [
+                            0.12,
+                            0.2
+                        ]
+                    },
+                    "Pow!": {
+                        "Front": 0.95,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.35
+                },
                 "Burst": "伤害量大幅提升。不会发动追击",
                 "Burst Cost": 20
             },
@@ -17082,7 +17099,12 @@
                 "Type": "Passive",
                 "Astrogen": "0",
                 "Cooldown": "1",
-                "Multipliers": {}
+                "Multipliers": {
+                    "Heal": {
+                        "Max HP": 0.06
+                    },
+                    "Max Enh": 0.3
+                }
             },
             {
                 "Name": "请来吧，老爷",
@@ -17091,7 +17113,20 @@
                 "Astrogen": "2",
                 "Morale": "+30",
                 "Cooldown": "[5-4]",
-                "Multipliers": {}
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 1.3,
+                        "Max HP": 0.2
+                    },
+                    "Mult Mod": {
+                        "per stack": 0.25
+                    },
+                    "Pow!": {
+                        "Front": 0.95,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.35
+                }
             }
         ]
     },
@@ -17884,6 +17919,101 @@
                         "None": 0.5,
                         "(Self - Target's SPD)": 0.0034
                     }
+                }
+            }
+        ]
+    },
+    {
+        "id": "H178",
+        "name": "喧闹之星哈蒂",
+        "e7_name": "沛伊拉",
+        "other_names": [
+            "Chaotic Star Heidi",
+            "水狼",
+            "水哈蒂"
+        ],
+        "Attribute": "Water",
+        "Class": "Vanguard",
+        "Stars": 5,
+        "Released": "2026-03-18",
+        "Breast": "D",
+        "Birthday": "12-12",
+        "Faction": "Ark γ",
+        "Height": "169",
+        "Weight": "62",
+        "ATK": 925,
+        "HP": 4718,
+        "DEF": 487,
+        "Speed": 124,
+        "Discipline": {
+            "1": {
+                "HP%": "3"
+            },
+            "2": {
+                "Effect_Hit_Rate": "6"
+            },
+            "4": {
+                "Speed": "4"
+            },
+            "5": {
+                "HP%": "6"
+            },
+            "6": {
+                "Effect_Hit_Rate": "12"
+            }
+        },
+        "Potential": {
+            "Team": "ATK%",
+            "Self": "Effect Hit Rate"
+        },
+        "Skills": [
+            {
+                "Name": "喷射烟火！",
+                "Describe": "射出烟火攻击敌人，以[30-40%]机率造成晕眩(1回合)。自身处于护盾状态时，效果发生率提升25%",
+                "Type": "Active",
+                "Astrogen": "1",
+                "Cooldown": "1",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 1
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                },
+                "Burst": "效果发生率提升为100%",
+                "Burst Cost": 10
+            },
+            {
+                "Name": "还我喵喵拳~",
+                "Describe": "喵拳击打全体敌人，使正向状态减少1回合后，造成拘禁(2回合)、无法强化(2回合)。自身产生追加回合",
+                "Type": "Active",
+                "Astrogen": "2",
+                "Cooldown": "[6-5]",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 1
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                }
+            },
+            {
+                "Name": "英雄授勋仪式",
+                "Describe": "进行授勋仪式，使自身除外的全体我方成员附加攻击力提升(2回合)后，自身附加潜伏(3回合)、守护(3回合)、护盾(3回合)。护盾效果根据自身等级等比提升",
+                "Type": "Active",
+                "Astrogen": "2",
+                "Cooldown": "[5-4]",
+                "Multipliers": {
+                    "Shield": {
+                        "Self Level": 180
+                    },
+                    "Max Enh": 0.3
                 }
             }
         ]
