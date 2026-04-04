@@ -239,8 +239,7 @@ configs/*
 doc/update_log_history.txt
 
 # docker运行数据
-napcat-docker/**/napcat/
-napcat-docker/**/ntqq/
+napcat-docker/
 
 # rubi运行数据
 data/
