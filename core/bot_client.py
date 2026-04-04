@@ -133,7 +133,7 @@ class QQBotClient:
 
     async def docker_restart(self):
         """异步重启Docker容器"""
-        container_name = config_manager.info["self_name_en"]
+        container_name = config_manager.info["self_name_en"].lower()
         try:
             # 创建子进程并异步执行
             process = await asyncio.create_subprocess_exec(

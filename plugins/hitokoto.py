@@ -43,8 +43,7 @@ class Hitokoto(BasePlugin):
             return False
 
         # 关键词判断
-        msg.startswith
-        if msg.startswith(("一言：", "一言:")):
+        if msg == "一言" or msg.startswith(("一言：", "一言:")):
             select = msg[3:]  # 截取选择的分类
 
             # 检查开关
@@ -66,7 +65,7 @@ class Hitokoto(BasePlugin):
                         response = await client.get(url, params=params)
                         text = response.json()
                 
-                    author = text.get("from_who", "")
+                    author = text["from_who"] if text.get("from_who") else ""
                     source = f"《{text['from']}》" if text.get("from") else ""
                     send_buff = f"{text['hitokoto']}\n——{author}{source}"
                 except Exception as e:
