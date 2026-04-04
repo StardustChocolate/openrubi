@@ -18017,5 +18017,211 @@
                 }
             }
         ]
+    },
+    {
+        "id": "H811",
+        "name": "璐茜娅熊熊",
+        "e7_name": "​​无",
+        "other_names": [
+            "Teddy Lucia"
+        ],
+        "Attribute": "Flame",
+        "Class": "Caster",
+        "Stars": 3,
+        "Released": "2026-04-01",
+        "Breast": "Teddy~",
+        "Birthday": "Teddy~",
+        "Faction": "Unknown",
+        "Height": "Teddy~",
+        "Weight": "Teddy~",
+        "ATK": 669,
+        "HP": 4712,
+        "DEF": 617,
+        "Speed": 100,
+        "Discipline": {
+            "1": {
+                "ATK%": "3"
+            },
+            "2": {
+                "ATK%": "3"
+            },
+            "4": {
+                "Crit_Rate": "8"
+            },
+            "5": {
+                "ATK%": "6"
+            },
+            "6": {
+                "ATK%": "6"
+            }
+        },
+        "Potential": {
+            "Team": "ATK",
+            "Self": "Effect Hit Rate"
+        },
+        "Skills": [
+            {
+                "Name": "熊！魔方病毒",
+                "Describe": "释放病毒攻击敌人并以[60-70%]机率造成沉睡(1回合)。发生沉睡时，自身行动值提升50%，此技能不会发动追击",
+                "Type": "Active",
+                "Astrogen": "1",
+                "Cooldown": "1",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 0.3,
+                        "Max HP": 0.03
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                }
+            },
+            {
+                "Name": "熊！骇客入侵",
+                "Describe": "攻击全体敌人造成行动值下降[20-30%]、拘禁(2回合)",
+                "Type": "Active",
+                "Astrogen": "2",
+                "Cooldown": "3",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 0.2
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                }
+            },
+            {
+                "Name": "熊！星源解放",
+                "Describe": "爆发星源之力攻击全体敌人，以[70-85%]机率造成防御力下降(2回合)，以[85-100%]机率造成沉睡(1回合)",
+                "Type": "Active",
+                "Astrogen": "3",
+                "Cooldown": "[4-3]",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 0.275
+                    },
+                    "Pow!": {
+                        "Front": 1.05,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.25
+                }
+            }
+        ]
+    },
+    {
+        "id": "H180",
+        "name": "烈酒赤兔芭索萝",
+        "e7_name": "爱德华·爱力克",
+        "other_names": [
+            "Crimson Hare Bartholo",
+            "赤兔",
+            "华子",
+            "爱德华"
+        ],
+        "Attribute": "Flame",
+        "Class": "Warrior",
+        "Stars": 5,
+        "Released": "2026-04-01",
+        "Breast": "D",
+        "Birthday": "12-07",
+        "Faction": "Dune Wolves",
+        "Height": "172",
+        "Weight": "64",
+        "ATK": 834,
+        "HP": 5364,
+        "DEF": 585,
+        "Speed": 113,
+        "Discipline": {
+            "1": {
+                "DEF%": "3"
+            },
+            "2": {
+                "HP%": "3"
+            },
+            "4": {
+                "Speed": "4"
+            },
+            "5": {
+                "DEF%": "6"
+            },
+            "6": {
+                "HP%": "6"
+            }
+        },
+        "Potential": {
+            "Team": "HP%",
+            "Self": "Crit Rate"
+        },
+        "Skills": [
+            {
+                "Name": "酒瓶挥击",
+                "Describe": "挥动酒瓶攻击敌人并使自身附加护盾(1回合)。伤害量和护盾效果根据自身最大生命力等比提升",
+                "Type": "Active",
+                "Astrogen": "1",
+                "Cooldown": "1",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 1,
+                        "Max HP": 0.1
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3,
+                    "Shield": {
+                        "Max HP": 0.08
+                    },
+                    "Max Enh 2": 0.5
+                }
+            },
+            {
+                "Name": "我才没醉",
+                "Describe": "基础状态命中提升30%\n受到攻击后，若自身处于负向状态时，则解除1个负向状态后追加施展「烈酒奉送！」。烈酒奉送！效果1回合只会发生1次\n烈酒奉送！：投掷酒瓶攻击全体敌人造成创伤后，解除1个正向状态并造成随机负向状态(2回合)，自身行动值提升20%。伤害量根据自身最大生命力等比提升。创伤效果根据伤害量等比提升，每施展1次技能，最多可降低目标最大生命力的6%",
+                "Type": "Passive",
+                "Astrogen": "0",
+                "Cooldown": "1",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 0.7,
+                        "Max HP": 0.08
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                }
+            },
+            {
+                "Name": "这东西·好硬啊",
+                "Describe": "豪迈倒酒攻击敌人，使自身行动值提升50%。若目标为团员时，无视伤害分配效果。伤害量根据自身最大生命力等比提升。此技能会随施展次数增加伤害量，最多重叠3次",
+                "Type": "Active",
+                "Astrogen": "3",
+                "Cooldown": "[5-4]",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 1.2,
+                        "Max HP": 0.25
+                    },
+                    "Mult Mod": {
+                        "per stack": 0.2
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                },
+                "Burst": "该技能冷却时间减少2回合",
+                "Burst Cost": 10
+            }
+        ]
     }
 ]
