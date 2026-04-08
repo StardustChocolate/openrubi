@@ -18223,5 +18223,108 @@
                 "Burst Cost": 10
             }
         ]
+    },
+    {
+        "id": "H170",
+        "name": "甜蜜美梦安熙恩",
+        "e7_name": "司令官帕贝尔",
+        "other_names": [
+            "Sweet Dreams Anheeun",
+            "光狼枪",
+            "卧龙",
+            "光安熙恩"
+        ],
+        "Attribute": "Light",
+        "Class": "Sniper",
+        "Stars": 5,
+        "Released": "2026-04-08",
+        "Breast": "D",
+        "Birthday": "02-08",
+        "Faction": "Ark β",
+        "Height": "164",
+        "Weight": "58",
+        "ATK": 998,
+        "HP": 4718,
+        "DEF": 582,
+        "Speed": 109,
+        "Discipline": {
+            "1": {
+                "ATK%": "3"
+            },
+            "2": {
+                "ATK%": "3"
+            },
+            "4": {
+                "Crit_Rate": "8"
+            },
+            "5": {
+                "ATK%": "6"
+            },
+            "6": {
+                "ATK%": "6"
+            }
+        },
+        "Potential": {
+            "Team": "ATK%",
+            "Self": "ATK%"
+        },
+        "Skills": [
+            {
+                "Name": "别吵我！",
+                "Describe": "甩出软绵绵的睡鞋攻击敌人，以[65-75%]机率造成攻击力下降(1回合)",
+                "Type": "Active",
+                "Astrogen": "1",
+                "Cooldown": "1",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 1
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                }
+            },
+            {
+                "Name": "起床气",
+                "Describe": "首次战斗开始时，附加技能伤害无效1次，并获得60点战意\n自身除外的我方成员攻击时，获得10战意；发生暴击时，获得20战意，若战意达到最大值，则消耗所有战意并解除自身所有负向状态后，施展「让我再睡一下…」\n让我再睡一下…：自身附加攻击力提升(2回合)后，攻击全体敌人，并使自身行动值提升100%",
+                "Type": "Passive",
+                "Astrogen": "0",
+                "Cooldown": "1",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 0.8
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                }
+            },
+            {
+                "Name": "好想…和你一起…",
+                "Describe": "挥动软绵绵的枕头攻击敌人。贯穿目标70%防御力。目标为团员时，无视伤害分配效果",
+                "Type": "Active",
+                "Astrogen": "3",
+                "Cooldown": "[5-4]",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": [
+                            0.85,
+                            1.2
+                        ]
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                },
+                "Burst": "伤害量提升",
+                "Burst Cost": 10
+            }
+        ]
     }
 ]
