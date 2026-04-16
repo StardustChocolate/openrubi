@@ -40,7 +40,7 @@ class DockerManager:
             # NAPCAT_UID=$(id -u) NAPCAT_GID=$(id -g) docker compose -f ./docker-compose.yml up -d
             services:
                 napcat:
-                    image: mlikiowa/napcat-docker:latest
+                    image: mlikiowa/napcat-docker:v4.17.20
                     container_name: {self.name}
                     restart: always
                     network_mode: bridge
