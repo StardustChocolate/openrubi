@@ -18326,5 +18326,104 @@
                 "Burst Cost": 10
             }
         ]
+    },
+    {
+        "id": "H179",
+        "name": "重装助手翠丝特",
+        "e7_name": "赛娜",
+        "other_names": [
+            "Combat Mechanic Trist"
+        ],
+        "Attribute": "Nature",
+        "Class": "Defender",
+        "Stars": 5,
+        "Released": "2026-04-15",
+        "Breast": "C",
+        "Birthday": "06-15",
+        "Faction": "A.R.I.",
+        "Height": "170",
+        "Weight": "63",
+        "ATK": 815,
+        "HP": 6346,
+        "DEF": 645,
+        "Speed": 100,
+        "Discipline": {
+            "1": {
+                "ATK%": "3"
+            },
+            "2": {
+                "ATK%": "3"
+            },
+            "4": {
+                "HP%": "6"
+            },
+            "5": {
+                "ATK%": "6"
+            },
+            "6": {
+                "ATK%": "6"
+            }
+        },
+        "Potential": {
+            "Team": "HP%",
+            "Self": "ATK%"
+        },
+        "Skills": [
+            {
+                "Name": "压制模式：Noise",
+                "Describe": "启动压制模式攻击敌人并以[65-75%]机率造成嘲讽(1回合)。非自身回合施展时，效果发生率提升25%",
+                "Type": "Active",
+                "Astrogen": "1",
+                "Cooldown": "1",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 0.95
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                }
+            },
+            {
+                "Name": "VEIL系统",
+                "Describe": "攻击力提升30%、暴击抵抗提升[35-50%]\n攻击时不会发生暴击\n受到非暴击攻击时，对攻击者造成自身攻击力等比的追加伤害，并施展「力场展开：Nullzone」，「力场展开：Nullzone」效果2回合只会发生1次。力场展开：Nullzone：使全体我方成员附加护盾(2回合)速度提升(2回合)。护盾效果根据自身攻击力等比提升",
+                "Type": "Passive",
+                "Astrogen": "0",
+                "Cooldown": "2",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 0.45
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Shield": {
+                        "ATK": 0.35
+                    }
+                }
+            },
+            {
+                "Name": "强袭模式：Hellrain",
+                "Describe": "强袭全体敌人，以[75-100%]机率造成命中率下降(2回合)，以[60-85%]机率造成嘲讽(1回合)，自身附加攻击力大幅提升(3回合)、反击(3 回合)",
+                "Type": "Active",
+                "Astrogen": "3",
+                "Cooldown": "[5-4]",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 1.5
+                    },
+                    "Pow!": {
+                        "Front": 1.1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.2
+                },
+                "Burst": "该技能冷却时间减少2回合",
+                "Burst Cost": 10
+            }
+        ]
     }
 ]
