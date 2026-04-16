@@ -12,7 +12,7 @@ class Chat(BasePlugin):
     
     # 插件基本信息
     name: str = "聊天"
-    description: str = "🌟当聊天功能开启时，未命中任何关键词会落在此处，当前模型为DeepSeek-V3.2-Exp，输入[重置聊天]可以恢复初始设定并清空聊天历史，输入[设定：+内容]可以将想要的内容覆盖掉初始设定"
+    description: str = "🌟当聊天功能开启时，未命中任何关键词会落在此处，当前模型为DeepSeek-V3.2-Exp，输入[重置聊天]可以恢复初始设定并清空聊天历史，输入[设定：+内容]可以将想要的内容覆盖掉初始设定，输入[重置所有聊天]可重置全部群聊和私聊聊天记录（仅监护人可用）"
 
     # ---------------------参数---------------------
     # api_key = ''                                                            # api-key(已改为配置文件中设置，不在此处放置)
@@ -48,7 +48,7 @@ class Chat(BasePlugin):
         # 非好友私聊过滤
         if self.filter_nonfriend(data):
             await self.send_private_msg(data.get("user_id"), "你还不是我的好友呀~")
-            return True
+            return False
 
         # 空消息
         if msg == "":
@@ -82,6 +82,23 @@ class Chat(BasePlugin):
                 # 发送消息
                 await self.send_private_msg(data.get("user_id"), "嗯呐(*ෆ´ ˘ `ෆ*)♡")
 
+            return True
+
+        # 指令：重置所有聊天
+        elif msg == '重置所有聊天':
+            bot_admin = data.get("user_id") in config_manager.info["admin_id"]
+            if not bot_admin:
+                if data.get("message_type") == "group":
+                    await self.send_group_msg(data.get("group_id"), "你的权限还不够呢\nヽ(*。>Д<)o゜")
+                else:
+                    await self.send_private_msg(data.get("user_id"), "你的权限还不够呢\nヽ(*。>Д<)o゜")
+                return True
+
+            await self.reset_all_chat_history()
+            if data.get("message_type") == "group":
+                await self.send_group_msg(data.get("group_id"), "嗯呐(*ෆ´ ˘ `ෆ*)♡")
+            else:
+                await self.send_private_msg(data.get("user_id"), "嗯呐(*ෆ´ ˘ `ෆ*)♡")
             return True
         
         # 指令：设定
@@ -206,6 +223,21 @@ class Chat(BasePlugin):
         
         return False
 
+    def get_default_chat_prompt(self):
+        return [{"role": "system", "content": config_manager.info["prompt"].replace("{self_name}", config_manager.info["self_name"])}]
+
+    async def reset_all_chat_history(self):
+        default_prompt = self.get_default_chat_prompt()
+        for group_info in config_manager.group_info.values():
+            group_info["chat_prompt"] = [default_prompt[0].copy()]
+        for private_info in config_manager.private_info.values():
+            private_info["chat_prompt"] = [default_prompt[0].copy()]
+
+        self.group_queues.clear()
+        self.private_queues.clear()
+
+        await config_manager.save_group_info()
+        await config_manager.save_private_info()
 
     # api调用
     async def call_gpt_api(self, prompt):

@@ -6,7 +6,7 @@ class PigTest(BasePlugin):
     
     # 插件基本信息
     name: str = "猪猪测试"
-    description: str = "🌟关键词：[猪猪测试、猪猪网站]，测测你是不是🐷~"
+    description: str = "🌟关键词：[猪猪测试、猪猪网站]，快来测测是哪种🐷~"
     
     def __init__(self):
         super().__init__()
@@ -31,7 +31,7 @@ class PigTest(BasePlugin):
             if not await self.check_enable(data, bot):
                 return True
 
-            send_buff = "测测你是不是🐷https://nanancc.github.io/pig-text/?darkmode=0"
+            send_buff = "快来测测是哪种🐷https://nanancc.github.io/pig-text/?darkmode=0"
 
             # 发送信息
             if data.get("message_type") == "group":
