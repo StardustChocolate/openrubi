@@ -6,7 +6,7 @@ class SetGroupTitle(BasePlugin):
     
     # 插件基本信息
     name: str = "设置群头衔"
-    description: str = "🌟关键词：[获取头衔：+内容]即可获取群头衔啦（内容为空视为取消头衔）\n🌟该功能仅在我为群主的时候生效哦~"
+    description: str = "🌟关键词：[获取头衔：+内容]即可获取群头衔啦（内容为空视为取消头衔）\n🌟该功能仅在我为群主的时候生效哦~\n🌟监护人可通过[自己获取头衔：+内容]为我设置群头衔~"
     
     def __init__(self):
         super().__init__()
@@ -51,6 +51,36 @@ class SetGroupTitle(BasePlugin):
                     )
                 await self.send_group_msg(data.get("group_id"), send_buff)
                 
+                return True
+
+            elif msg.startswith("自己获取头衔"):
+                title = msg.lstrip('自己获取头衔：:') # 截取头衔内容
+                # 获取自身是否为群主
+                member_info = await bot.api_client.call_api(
+                    action="get_group_member_info",
+                    params = {
+                        "group_id": data.get("group_id"), 
+                        "user_id": data.get("self_id")
+                    }
+                )
+                if not member_info:
+                    await self.send_group_msg(data.get("group_id"), "啊这。。。获取自身信息出错啦Σ(っ °Д °;)っ")
+                    return True
+                
+                if member_info.get("role") != "owner":
+                    send_buff = "我还不是群主呢\nヽ(*。>Д<)o゜"
+                else:
+                    send_buff = "嗯呐(*ෆ´ ˘ `ෆ*)♡"
+                    await bot.api_client.call_api(
+                        action="set_group_special_title",
+                        params = {
+                            "group_id": data.get("group_id"), 
+                            "user_id": data.get("self_id"),
+                            "special_title": title
+                        }
+                    )
+                await self.send_group_msg(data.get("group_id"), send_buff)
+
                 return True
         
         return False
