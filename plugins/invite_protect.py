@@ -8,7 +8,7 @@ class InviteProtect(BasePlugin):
     
     # 插件基本信息
     name: str = "受邀保护"
-    description: str = "🌟由于QQ端人数过少的群聊邀请会自动同意，设置此功能可以作为保护防止乱拉群\n🌟监护人指令:\n[添加群(输入群号，无需括号)]即可登记群聊\n[删除群(输入群号，无需括号)]取消登记(同时会自动退群)\n[列出群]即可列出已登记的群聊"
+    description: str = "🌟由于QQ端人数过少的群聊邀请会自动同意，设置此功能可以作为保护防止乱拉群\n🌟监护人指令:\n[添加群(输入群号，无需括号)]即可登记群聊\n[删除群(输入群号，无需括号)]取消登记(同时会自动退群)\n[删除所有群]即可取消登记所有群聊并退出\n[列出群]即可列出已登记的群聊"
     
     def __init__(self):
         super().__init__()
@@ -126,5 +126,32 @@ class InviteProtect(BasePlugin):
                 await self.send_private_msg(data.get("user_id"), send_buff) 
 
             return True 
+
+        # 删除所有群
+        if msg == "删除所有群":
+            if bot_admin:
+                self_info = await config_manager.get_self_info()
+                if self_info["group_register"]:
+                    for gid in list(self_info["group_register"]):
+                        await bot.api_client.call_api(
+                            action="set_group_leave",
+                            params={
+                                "group_id": int(gid)
+                            }
+                        )
+                    self_info["group_register"].clear()
+                    await config_manager.save_self_info()
+                    send_buff = "已取消登记所有群聊并退出(*ෆ´ ˘ `ෆ*)♡"
+                else:
+                    send_buff = "当前没有已登记的群聊哦~\n(｡•̀ᴗ-)✧"
+            else:
+                send_buff = "你的权限不够了啦\nヽ(*。>Д<)o゜"
+
+            if data.get("message_type") == "group":
+                await self.send_group_msg(data.get("group_id"), send_buff)
+            elif data.get("message_type") == "private":
+                await self.send_private_msg(data.get("user_id"), send_buff)
+
+            return True
 
         return False
