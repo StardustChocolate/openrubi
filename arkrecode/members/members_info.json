@@ -9357,6 +9357,7 @@
         "e7_name": "帕贝尔",
         "other_names": [
             "Bartoz",
+            "木狼枪",
             "木女仆"
         ],
         "Attribute": "Nature",
@@ -18423,6 +18424,109 @@
                 },
                 "Burst": "该技能冷却时间减少2回合",
                 "Burst Cost": 10
+            }
+        ]
+    },
+    {
+        "id": "H171",
+        "name": "加加琳",
+        "e7_name": "一轮孤月维尔萝娜",
+        "other_names": [
+            "Gagarin",
+            "暗扇"
+        ],
+        "Attribute": "Dark",
+        "Class": "Warrior",
+        "Stars": 5,
+        "Released": "2026-04-29",
+        "Breast": "G",
+        "Birthday": "12-31",
+        "Faction": "Unknown",
+        "Height": "165",
+        "Weight": "58",
+        "ATK": 971,
+        "HP": 5567,
+        "DEF": 582,
+        "Speed": 102,
+        "Discipline": {
+            "1": {
+                "HP%": "3"
+            },
+            "2": {
+                "ATK%": "3"
+            },
+            "4": {
+                "DEF%": "6"
+            },
+            "5": {
+                "HP%": "6"
+            },
+            "6": {
+                "ATK%": "6"
+            }
+        },
+        "Potential": {
+            "Team": "HP%",
+            "Self": "ATK%"
+        },
+        "Skills": [
+            {
+                "Name": "巨钳攻击",
+                "Describe": "挥动巨钳攻击敌人造成最多10%创伤后，根据伤害量恢复生命力。命中时必定暴击",
+                "Type": "Active",
+                "Astrogen": "1",
+                "Morale": "+20",
+                "Cooldown": "1",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": [
+                            0.9,
+                            1.6
+                        ]
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                },
+                "Burst": "伤害量提升，创伤效果提升至最多20%",
+                "Burst Cost": 10
+            },
+            {
+                "Name": "动力压缩",
+                "Describe": "我方成员受到攻击时获得20战意。攻击后，自身攻击力提升10%，最多重叠5次\n我方成员受到攻击时若战意达到最大值，则消耗所有战意施展「洩压」\n洩压：解除自身1个负向状态后攻击全体敌人造成最多15%创伤，并使自身行动值提升30%。命中时必定暴击",
+                "Type": "Passive",
+                "Astrogen": "0",
+                "Cooldown": "1",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 0.6
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                }
+            },
+            {
+                "Name": "别喷得到处都是！",
+                "Describe": "自身附加气魄(3回合)后，组装机械引擎攻击敌人，自身附加免疫(2回合)。命中时必定暴击",
+                "Type": "Active",
+                "Astrogen": "2",
+                "Morale": "+20",
+                "Cooldown": "3",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 1.7
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                }
             }
         ]
     }
