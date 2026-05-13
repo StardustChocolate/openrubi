@@ -2186,5 +2186,40 @@
             }
         },
         "Notes": "贯穿70%防御力，无克制属性，无法暴击，无法闪避"
+    },
+    {
+        "id": "A0335",
+        "name": "逆转的撩拨",
+        "e7_name": "白雪水晶",
+        "other_names": [
+            "Provocative Reversal",
+            "雪花"
+        ],
+        "Related": "时界巡者Aoi",
+        "Class": "Warrior",
+        "Stars": 5,
+        "Released": "2026-05-13",
+        "ATK": {
+            "Base": 21,
+            "Max": 273
+        },
+        "HP": {
+            "Base": 32,
+            "Max": 416
+        },
+        "Description": "这次，你一反过去會被她夜袭的情况，在她的闺房中掌握了主导权，也理所当然地将她娇羞的模样尽收眼底。",
+        "Skill": "暴击抵抗提升20%、生命力提升10%\n受到非暴击攻击时，行动值提升[8-16%]。1回合只会发生1次",
+        "Multipliers": {
+            "Normal": {
+                "Flat Mod": {
+                    "ATK": 0.45
+                },
+                "Pow!": {
+                    "Front": 1,
+                    "Rear": 1.871
+                }
+            }
+        },
+        "Notes": ""
     }
 ]

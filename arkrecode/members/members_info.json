@@ -6482,7 +6482,8 @@
         "other_names": [
             "Seaside Noclyn",
             "水偶",
-            "水偶像"
+            "水偶像",
+            "水扇"
         ],
         "Attribute": "Water",
         "Class": "Sniper",
@@ -7593,7 +7594,7 @@
         "Attribute": "Light",
         "Class": "Caster",
         "Stars": 5,
-        "Released": "",
+        "Released": "2026-05-06",
         "Breast": "F",
         "Birthday": "07-15",
         "Faction": "Ark Ω",
@@ -7646,7 +7647,7 @@
             },
             {
                 "Name": "圣芒照耀",
-                "Describe": "免疫晕眩\n自身除外的我方成员受到攻击时提升自身行动值，提升比例为自身除外受到攻击的我方成员数量x8%受到全体攻击时，以[75-100%]机率施展「圣芒照耀」，该效果3回合只会发生1次\n「圣芒照耀」：解除全体我方成员1个负向状态并附加技能伤害无效1次",
+                "Describe": "免疫晕眩\n自身除外的我方成员受到攻击时提升自身行动值，提升比例为自身除外受到攻击的我方成员数量x8%\n受到全体攻击时，以[75-100%]机率施展「圣芒照耀」，该效果3回合只会发生1次\n「圣芒照耀」：解除全体我方成员2个负向状态并附加技能伤害无效1次",
                 "Type": "Passive",
                 "Astrogen": "0",
                 "Cooldown": "3",
@@ -7657,7 +7658,7 @@
                 "Describe": "凝聚神光解除全体敌人2个正向状态后。以[70-100%]机率造成无法强化(2回合)、沉默(1回合)",
                 "Type": "Active",
                 "Astrogen": "3",
-                "Cooldown": "5",
+                "Cooldown": "[5-4]",
                 "Multipliers": {}
             }
         ]
@@ -18520,6 +18521,109 @@
                 "Multipliers": {
                     "Flat Mod": {
                         "ATK": 1.7
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                }
+            }
+        ]
+    },
+    {
+        "id": "H173",
+        "name": "时界巡者Aoi",
+        "e7_name": "小泡芙",
+        "other_names": [
+            "Chrono Agent Aoi",
+            "时界"
+        ],
+        "Attribute": "Water",
+        "Class": "Warrior",
+        "Stars": 5,
+        "Released": "2026-05-13",
+        "Breast": "G",
+        "Birthday": "10-24",
+        "Faction": "Unknown",
+        "Height": "168",
+        "Weight": "??",
+        "ATK": 816,
+        "HP": 5850,
+        "DEF": 620,
+        "Speed": 112,
+        "Discipline": {
+            "1": {
+                "HP%": "3"
+            },
+            "2": {
+                "HP%": "3"
+            },
+            "4": {
+                "DEF%": "6"
+            },
+            "5": {
+                "HP%": "6"
+            },
+            "6": {
+                "HP%": "6"
+            }
+        },
+        "Potential": {
+            "Team": "ATK%",
+            "Self": "Crit Rate"
+        },
+        "Skills": [
+            {
+                "Name": "引领风潮的传说",
+                "Describe": "引领风潮攻击敌人并使自身行动值提升[15-20%]。施展技能后有40%机率追加施展「吸血鬼裂界风暴」。伤害量根据自身最大生命力等比提升",
+                "Type": "Active",
+                "Astrogen": "1",
+                "Focus": "+2",
+                "Cooldown": "1",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 0.5,
+                        "Max HP": 0.1
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                },
+                "Burst": "施展后产生追加回合",
+                "Burst Cost": 20
+            },
+            {
+                "Name": "吸血鬼裂界风暴",
+                "Describe": "刮起暴风攻击敌人并根据伤害量恢复生命力。贯穿目标70%防御力。若集中力达到最大值时，消耗所有集中力使伤害量提升，并使「吸血鬼裂界风暴」技能冷却时间减少到最少。伤害量根据自身最大生命力等比提升\n基础暴击率提升20%",
+                "Type": "Active",
+                "Astrogen": "1",
+                "Cooldown": "3",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 0.5,
+                        "Max HP": 0.04
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                }
+            },
+            {
+                "Name": "患者泰山压顶",
+                "Describe": "召唤超巨大患者小鸡压击全体敌人，使我方全体成员附加暴击抵抗提升(2回合)、免疫(2回合)。伤害量根据自身最大生命力等比提升。自身除外的我方成员受到攻击后，以20%机率发动反击。首次战斗开始时，自身附加暴击抵抗提升(1回合)",
+                "Type": "Active",
+                "Astrogen": "3",
+                "Focus": "+3",
+                "Cooldown": "5",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 0.5,
+                        "Max HP": 0.15
                     },
                     "Pow!": {
                         "Front": 1,
