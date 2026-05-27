@@ -35,11 +35,11 @@ class TTSRepeat(BasePlugin):
         if msg.startswith(("说：", "说:", "跟我说：", "跟我说:")):
 
             # 目前功能还在开发中，先回复提示消息
-            if data.get("message_type") == "group":
-                await self.send_group_msg(data.get("group_id"), "该功能还在开发中哦~")
-            elif data.get("message_type") == "private":
-                await self.send_private_msg(data.get("user_id"), "该功能还在开发中哦~")
-            return True
+            # if data.get("message_type") == "group":
+            #     await self.send_group_msg(data.get("group_id"), "该功能还在开发中哦~")
+            # elif data.get("message_type") == "private":
+            #     await self.send_private_msg(data.get("user_id"), "该功能还在开发中哦~")
+            # return True
 
             # 提取文本
             if msg.startswith(("说：", "说:")):
@@ -97,7 +97,7 @@ class TTSRepeat(BasePlugin):
         prompt_text = "子供扱いしないで、ちゃんと体を見てください。"
         req = {
             "text": text,
-            "text_lang": "zh",
+            "text_lang": "auto",
             "ref_audio_path": ref_audio_path,
             "prompt_text": prompt_text,
             "prompt_lang": "ja",
@@ -115,7 +115,7 @@ class TTSRepeat(BasePlugin):
             async with httpx.AsyncClient() as client:
                 response = await client.post(f"{self.tts_url}/tts", json=req, timeout=60)
                 if response.status_code == 200:
-                    audio_filename = f"tts_{hash(text)}.wav"
+                    audio_filename = f"tts_output.wav"
                     audio_path = self.temp_dir / audio_filename
                     with open(audio_path, "wb") as f:
                         f.write(response.content)
