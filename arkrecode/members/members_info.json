@@ -3716,60 +3716,56 @@
     },
     {
         "id": "H602",
-        "name": "Mero",
-        "e7_name": "扎怒塔",
+        "name": "芽路",
+        "e7_name": "海斯特",
         "other_names": [
-            "Mero"
+            "Mero",
+            "火正太"
         ],
         "Attribute": "Flame",
-        "Class": "Warrior",
-        "Stars": 3,
-        "Released": "",
+        "Class": "Vanguard",
+        "Stars": 5,
+        "Released": "2026-05-27",
         "Breast": "F",
         "Birthday": "05-16",
         "Faction": "Ark Ω",
         "Height": 172,
         "Weight": 66,
-        "ATK": 843,
-        "HP": 4475,
-        "DEF": 543,
-        "Speed": 101,
+        "ATK": 862,
+        "HP": 4960,
+        "DEF": 511,
+        "Speed": 120,
         "Discipline": {
             "1": {
                 "ATK%": "3"
             },
             "2": {
-                "ATK%": "3"
+                "Crit_Rate": "4"
             },
             "4": {
-                "Crit_Rate": "8"
+                "Effect_Hit_Rate": "12"
             },
             "5": {
                 "ATK%": "6"
             },
             "6": {
-                "ATK%": "6"
+                "Crit_Rate": "8"
             }
         },
         "Potential": {
-            "Team": "HP",
+            "Team": "HP%",
             "Self": "Crit Rate"
         },
         "Skills": [
             {
-                "Name": "彩色爆裂",
-                "Describe": "攻击敌人。如果自我处于凝聚状态，则造成的伤害会增加。",
+                "Name": "五彩斑斓",
+                "Describe": "攻击敌人，以[40-50%]机率造成防御力下降(2回合)、以[50-60%]机率造成命中率下降(1回合)",
                 "Type": "Active",
                 "Astrogen": "1",
-                "Morale": "+20",
                 "Cooldown": "1",
                 "Multipliers": {
                     "Flat Mod": {
-                        "ATK": 1,
-                        "Max HP": 0.12
-                    },
-                    "Mult Mod": {
-                        "Rage": 0.3
+                        "ATK": 1
                     },
                     "Pow!": {
                         "Front": 1,
@@ -3779,35 +3775,49 @@
                 }
             },
             {
-                "Name": "时尚天赋",
-                "Describe": "当盟军单位受到攻击时，自我获得10点战意，有[25-35%]的机会使用时尚天赋。时尚天赋可以每2回合触发一次。\n时尚天赋：对所有盟友施加速度提升(2回合)，对自己施加凝聚(2回合)。",
-                "Type": "Passive",
-                "Astrogen": "0",
-                "Cooldown": "2",
-                "Multipliers": {}
-            },
-            {
-                "Name": "棱镜闪光",
-                "Describe": "使用令人眼花缭乱的技术攻击敌人，并应用速度下降(2回合)，然后对自己应用攻击提升(2回合)。如果自我处于凝聚状态，此技能将忽略效果恢复。",
+                "Name": "精心打扮",
+                "Describe": "攻击敌人造成无法恢复(2回合)、回生(2回合)。根据伤害量恢复全体我方成员的生命力\n基础暴击率提升15%",
                 "Type": "Active",
                 "Astrogen": "2",
-                "Morale": "-100",
-                "Cooldown": "1",
+                "Cooldown": "3",
                 "Multipliers": {
                     "Flat Mod": {
                         "ATK": [
                             1.5,
-                            2.2
+                            2
                         ]
                     },
                     "Pow!": {
                         "Front": 1,
                         "Rear": 1.871
                     },
-                    "Max Enh": 0.3
+                    "Max Enh": 0.3,
+                    "Heal": {
+                        "Damage Dealt": 0.18
+                    }
                 },
                 "Burst": "伤害量提升",
                 "Burst Cost": 10
+            },
+            {
+                "Name": "炫彩缤纷",
+                "Describe": "以绚丽的手法攻击全体敌人，解除2个正向状态后，各以[85-100%]机率造成2个流血(3回合)、命中率下降(2回合)。发生暴击时，以[70-85%]机率造成防御力下降(2回合)。敌人目标为3位以下时，目标越少则伤害量越高。此攻击不会被反击",
+                "Type": "Active",
+                "Astrogen": "3",
+                "Cooldown": "[5-4]",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 1.2
+                    },
+                    "Mult Mod": {
+                        "(4 - Enemy Count)": 0.5
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                }
             }
         ]
     },
@@ -16465,7 +16475,8 @@
         "name": "泳池魅影吉妮兹",
         "e7_name": "雷姆",
         "other_names": [
-            "Swimsuit Specter Janis"
+            "Swimsuit Specter Janis",
+            "泳萝"
         ],
         "Attribute": "Water",
         "Class": "Warrior",
@@ -17284,7 +17295,7 @@
                         ]
                     },
                     "Mult Mod": {
-                        "if target has a debuff": 0.3
+                        "if target has a buff": 0.3
                     },
                     "Pow!": {
                         "Front": 1,
@@ -18334,7 +18345,8 @@
         "name": "重装助手翠丝特",
         "e7_name": "赛娜",
         "other_names": [
-            "Combat Mechanic Trist"
+            "Combat Mechanic Trist",
+            "重装助手"
         ],
         "Attribute": "Nature",
         "Class": "Defender",
@@ -18537,7 +18549,7 @@
         "e7_name": "小泡芙",
         "other_names": [
             "Chrono Agent Aoi",
-            "时界"
+            "时界巡者"
         ],
         "Attribute": "Water",
         "Class": "Warrior",
