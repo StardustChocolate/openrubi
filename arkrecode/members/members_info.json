@@ -18645,5 +18645,187 @@
                 }
             }
         ]
+    },
+    {
+        "id": "H181",
+        "name": "自信拉娜",
+        "e7_name": "仆人克萝爱",
+        "other_names": [
+            "Resolute Lana",
+            "光拉娜",
+            "光锤"
+        ],
+        "Attribute": "Light",
+        "Class": "Medic",
+        "Stars": 5,
+        "Released": "2026-06-10",
+        "Breast": "D",
+        "Birthday": "11-12",
+        "Faction": "Ark γ",
+        "Height": "163",
+        "Weight": "58",
+        "ATK": 499,
+        "HP": 4435,
+        "DEF": 694,
+        "Speed": 105,
+        "Discipline": {
+            "1": {
+                "Speed": "2"
+            },
+            "2": {
+                "HP%": "3"
+            },
+            "4": {
+                "DEF%": "6"
+            },
+            "5": {
+                "Speed": "4"
+            },
+            "6": {
+                "HP%": "6"
+            }
+        },
+        "Potential": {
+            "Team": "Effect RES",
+            "Self": "Effect RES"
+        },
+        "Skills": [
+            {
+                "Name": "信心爆裂",
+                "Describe": "鞭击敌人并以[25-40%]机率造成晕眩(1回合)，自身行动值提升15%。攻击结束后，若目标处于晕眩状态，则使自身除外的全体我方成员行动值提升15%",
+                "Type": "Active",
+                "Astrogen": "1",
+                "Cooldown": "1",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 1
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                },
+                "Burst": "施展后产生追加回合",
+                "Burst Cost": 20
+            },
+            {
+                "Name": "会慢慢变好的！",
+                "Describe": "我方成员受到的追加伤害下降50%\n回合开始时，使生命力比例最低的2名我方成员恢复生命力，恢复量根据自身最大生命力等比提升",
+                "Type": "Passive",
+                "Astrogen": "0",
+                "Cooldown": "1",
+                "Multipliers": {
+                    "Heal": {
+                        "Max HP": 0.11
+                    },
+                    "Max Enh": 0.5
+                }
+            },
+            {
+                "Name": "自信全开！",
+                "Describe": "展现自信，使死亡的全体我方成员以30%生命力复活，若目标存活时，则改为解除2个负向状态后，附加复苏(3回合)。使全体我方成员附加防御力提升(3回合)",
+                "Type": "Active",
+                "Astrogen": "3",
+                "Cooldown": "[5-4]",
+                "Multipliers": {}
+            }
+        ]
+    },
+    {
+        "id": "H192",
+        "name": "爱恋泡影的玳莲",
+        "e7_name": "艾莉雅",
+        "other_names": [
+            "Ephemeral Love Darlene",
+            "爱恋泡影"
+        ],
+        "Attribute": "Water",
+        "Class": "Caster",
+        "Stars": 5,
+        "Released": "2026-06-10",
+        "Breast": "C",
+        "Birthday": "04-18",
+        "Faction": "Ark γ Idol Training Institute",
+        "Height": "170",
+        "Weight": "63",
+        "ATK": 889,
+        "HP": 4879,
+        "DEF": 673,
+        "Speed": 111,
+        "Discipline": {
+            "1": {
+                "Effect_RES": "6"
+            },
+            "2": {
+                "Effect_Hit_Rate": "6"
+            },
+            "4": {
+                "Speed": "4"
+            },
+            "5": {
+                "Effect_RES": "12"
+            },
+            "6": {
+                "Effect_Hit_Rate": "12"
+            }
+        },
+        "Potential": {
+            "Team": "DEF%",
+            "Self": "DEF%"
+        },
+        "Skills": [
+            {
+                "Name": "梦幻泡影",
+                "Describe": "运用泡沫攻击包含目标在内的2名敌人，并以[40-50%]机率造成命中率下降(1回合)，非自身回合施展时，机率提升20%。伤害量根据自身防御力等比提升",
+                "Type": "Active",
+                "Astrogen": "1",
+                "Focus": "+1",
+                "Cooldown": "1",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 0.7,
+                        "DEF": 0.85
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                },
+                "Burst": "施展后产生追加回合",
+                "Burst Cost": 20
+            },
+            {
+                "Name": "人鱼的遗憾",
+                "Describe": "基础暴击率提升[20-30%]、基础状态抗性提升20%\n施展技能后，若集中力达到最大值，则会消耗全部集中力并施展「凄美的结局」\n凄美的结局：攻击全体敌人并解除2个正向状态后，使行动值下降30%。伤害量根据自身防御力等比提升",
+                "Type": "Passive",
+                "Astrogen": "0",
+                "Cooldown": "1",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 0.7,
+                        "DEF": 1.4
+                    },
+                    "Pow!": {
+                        "Front": 1.3,
+                        "Rear": 1.871
+                    }
+                }
+            },
+            {
+                "Name": "你与我的童话",
+                "Describe": "运用海洋香气使自身附加防御力提升(2回合)、反击(2回合)，自身除外的全体我方成员附加潜伏(2回合)、护盾(2回合)。护盾效果根据自身防御力等比提升",
+                "Type": "Active",
+                "Astrogen": "3",
+                "Focus": "+3",
+                "Cooldown": "[5-4]",
+                "Multipliers": {
+                    "Shield": {
+                        "DEF": 1
+                    }
+                }
+            }
+        ]
     }
 ]
