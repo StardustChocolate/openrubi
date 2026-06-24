@@ -18827,5 +18827,102 @@
                 }
             }
         ]
+    },
+    {
+        "id": "H187",
+        "name": "绚烂夏花卡洛琳",
+        "e7_name": "夜宴莉莉亚斯",
+        "other_names": [
+            "Midsummer Blossom Carolyn",
+            "绚烂夏花",
+            "木ll",
+            "木莉莉"
+        ],
+        "Attribute": "Nature",
+        "Class": "Vanguard",
+        "Stars": 5,
+        "Released": "2026-06-24",
+        "Breast": "E",
+        "Birthday": "03-12",
+        "Faction": "Ark β",
+        "Height": "166",
+        "Weight": "55",
+        "ATK": 971,
+        "HP": 4758,
+        "DEF": 508,
+        "Speed": 117,
+        "Discipline": {
+            "1": {
+                "ATK%": "3"
+            },
+            "2": {
+                "Crit_DMG": "5"
+            },
+            "4": {
+                "Speed": "4"
+            },
+            "5": {
+                "ATK%": "6"
+            },
+            "6": {
+                "Crit_DMG": "10"
+            }
+        },
+        "Potential": {
+            "Team": "ATK%",
+            "Self": "ATK%"
+        },
+        "Skills": [
+            {
+                "Name": "夏花绚烂",
+                "Describe": "挥舞花束攻击敌人并恢复自身生命力。恢复量根据自身攻击力等比提升。命中时必定暴击",
+                "Type": "Active",
+                "Astrogen": "1",
+                "Cooldown": "1",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": [
+                            1.1,
+                            1.8
+                        ]
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                },
+                "Burst": "伤害量提升",
+                "Burst Cost": 10
+            },
+            {
+                "Name": "秋叶静美",
+                "Describe": "战斗开始及回合结束时，自身附加受伤上限(1回合)\n自身回合攻击后，若目标生命力为50%以下时，追加施展「蜂蜜酒的祝福」，3回合只会发生1次。\n蜂蜜酒的祝福：自身除外的全体我方成员附加攻击力提升(2回合)、行动值提升[15-20%]，自身行动值提升50%",
+                "Type": "Passive",
+                "Astrogen": "0",
+                "Cooldown": "3",
+                "Multipliers": {}
+            },
+            {
+                "Name": "等等，别看···",
+                "Describe": "自身附加攻击力提升(3回合)后攻击敌人。目标为团员时，无视伤害下降、伤害分配效果。目标最大生命力越是高于自身最大生命力时，贯穿效益随之提升，最多提升至100%。命中时必定暴击",
+                "Type": "Active",
+                "Astrogen": "2",
+                "Cooldown": "[4-3]",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 0.5
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3,
+                    "Penetration": {
+                        "Target's Max HP - Self Max HP": 6.25e-05
+                    }
+                }
+            }
+        ]
     }
 ]
