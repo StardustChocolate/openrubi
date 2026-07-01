@@ -18924,5 +18924,94 @@
                 }
             }
         ]
+    },
+    {
+        "id": "H184",
+        "name": "尤莉",
+        "e7_name": "海盗船长芙兰",
+        "other_names": [
+            "Yuri",
+            "暗芙兰"
+        ],
+        "Attribute": "Dark",
+        "Class": "Sniper",
+        "Stars": 5,
+        "Released": "2026-07-01",
+        "Breast": "E",
+        "Birthday": "05-29",
+        "Faction": "Unknown",
+        "Height": "165",
+        "Weight": "55",
+        "ATK": 898,
+        "HP": 4879,
+        "DEF": 571,
+        "Speed": 114,
+        "Discipline": {
+            "1": {
+                "Effect_Hit_Rate": "6"
+            },
+            "2": {
+                "ATK%": "3"
+            },
+            "4": {
+                "ATK%": "6"
+            },
+            "5": {
+                "Effect_Hit_Rate": "12"
+            },
+            "6": {
+                "ATK%": "6"
+            }
+        },
+        "Potential": {
+            "Team": "HP%",
+            "Self": "ATK%"
+        },
+        "Skills": [
+            {
+                "Name": "潜影暗针",
+                "Describe": "射出暗针攻击敌人窃取1个正向状态。回合结束时，使目标身上的灼烧、炸弹激发",
+                "Type": "Active",
+                "Astrogen": "1",
+                "Cooldown": "1",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 0.7
+                    },
+                    "Pow!": {
+                        "Front": 0.95,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.35
+                },
+                "Burst": "施展后产生追加回合",
+                "Burst Cost": 20
+            },
+            {
+                "Name": "无声百中",
+                "Describe": "基础状态命中提升50%\n攻击时不会发生暴击。受到攻击时，受到的伤害量下降30%。伤害量下降效果重复时，只套用最高效果\n我方成员攻击后，若目标未拥有正向状态，则追加施展「紧束的快感」，3回合只会发生1次。\n紧束的快感：使全体我方成员附加瞬动、行动值提升[10-15%]",
+                "Type": "Passive",
+                "Astrogen": "0",
+                "Cooldown": "3",
+                "Multipliers": {}
+            },
+            {
+                "Name": "连式针爆",
+                "Describe": "自身附加攻击力提升(3回合)后，射出大量暗针攻击全体敌人窃取1个正向状态后，造成灼烧(2回合)、炸弹(2回合)、行动值下降30%",
+                "Type": "Active",
+                "Astrogen": "3",
+                "Cooldown": "[5-4]",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 0.8
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                }
+            }
+        ]
     }
 ]
