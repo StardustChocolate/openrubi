@@ -19022,5 +19022,191 @@
                 }
             }
         ]
+    },
+    {
+        "id": "H188",
+        "name": "雪江",
+        "e7_name": "落月",
+        "other_names": [
+            "Yukie"
+        ],
+        "Attribute": "Flame",
+        "Class": "Sniper",
+        "Stars": 5,
+        "Released": "2026-07-22",
+        "Breast": "F",
+        "Birthday": "01-14",
+        "Faction": "Unknown",
+        "Height": "168",
+        "Weight": "63",
+        "ATK": 853,
+        "HP": 5284,
+        "DEF": 585,
+        "Speed": 109,
+        "Discipline": {
+            "1": {
+                "Speed": "2"
+            },
+            "2": {
+                "Effect_Hit_Rate": "6"
+            },
+            "4": {
+                "Effect_Hit_Rate": "12"
+            },
+            "5": {
+                "Speed": "4"
+            },
+            "6": {
+                "Effect_Hit_Rate": "12"
+            }
+        },
+        "Potential": {
+            "Team": "ATK%",
+            "Self": "Effect Hit Rate"
+        },
+        "Skills": [
+            {
+                "Name": "刃之魂火",
+                "Describe": "斩击敌人并以[60-75%]机率造成沉默(1回合)。攻击结束后，若目标处于沉默状态，则使行动值下降20%",
+                "Type": "Active",
+                "Astrogen": "1",
+                "Cooldown": "1",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 1
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                }
+            },
+            {
+                "Name": "地狱威压",
+                "Describe": "对敌人造成被动无效(2回合)后，进行攻击，自身附加速度提升(2回合)",
+                "Type": "Active",
+                "Astrogen": "1",
+                "Cooldown": "2",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 1.5
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                }
+            },
+            {
+                "Name": "鬼门囚笼",
+                "Describe": "召唤鬼门攻击全体敌人解除所有正向状态后，造成压制(2回合)、技能冷却时间增加1回合。自身产生追加回合",
+                "Type": "Active",
+                "Astrogen": "3",
+                "Cooldown": "[5-4]",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 1
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                },
+                "Burst": "无视状态抗性",
+                "Burst Cost": 20
+            }
+        ]
+    },
+    {
+        "id": "H183",
+        "name": "米德",
+        "e7_name": "雪国的苏莉塔妮亚",
+        "other_names": [
+            "Mead",
+            "星法"
+        ],
+        "Attribute": "Light",
+        "Class": "Caster",
+        "Stars": 5,
+        "Released": "2026-07-22",
+        "Breast": "H",
+        "Birthday": "05-01",
+        "Faction": "Unknown",
+        "Height": "164",
+        "Weight": "59",
+        "ATK": 889,
+        "HP": 4879,
+        "DEF": 673,
+        "Speed": 111,
+        "Discipline": {
+            "1": {
+                "Speed": "2"
+            },
+            "2": {
+                "Effect_Hit_Rate": "6"
+            },
+            "4": {
+                "Speed": "4"
+            },
+            "5": {
+                "Effect_Hit_Rate": "12"
+            },
+            "6": {
+                "Effect_Hit_Rate": "12"
+            }
+        },
+        "Potential": {
+            "Team": "HP%",
+            "Self": "Effect Hit Rate"
+        },
+        "Skills": [
+            {
+                "Name": "巧手剪裁",
+                "Describe": "攻击敌人并以75%机率解除1个正向状态。若自身处于心流状态时，追加施展「凝止珠针」\n凝止珠针：运用珠针攻击全体敌人，以25%机率造成晕眩(1回合)",
+                "Type": "Active",
+                "Astrogen": "1",
+                "Cooldown": "1",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 0.7
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                }
+            },
+            {
+                "Name": "裁缝师之屋",
+                "Describe": "敌人集中力获得量减少100%\n回合开始时，以[70-100%]机率使自身附加心流(1回合)。战斗开始与回合结束时，以[70-100%]机率使自身附加潜伏(1回合)",
+                "Type": "Passive",
+                "Astrogen": "0",
+                "Cooldown": "1",
+                "Multipliers": {}
+            },
+            {
+                "Name": "好、好害羞···",
+                "Describe": "使敌人正向状态减少1回合后，舞动缎带攻击敌人造成晕眩(1回合)、行动值下降30%。攻击结束后，自身附加护盾(2回合)。护盾效果根据自身最大生命力等比提升",
+                "Type": "Active",
+                "Astrogen": "2",
+                "Cooldown": "[4-3]",
+                "Multipliers": {
+                    "Flat Mod": {
+                        "ATK": 1.8
+                    },
+                    "Pow!": {
+                        "Front": 1,
+                        "Rear": 1.871
+                    },
+                    "Max Enh": 0.3
+                },
+                "Burst": "此技能造成的正向状态持续回合数增加1回合，施展后产生追加回合",
+                "Burst Cost": 20
+            }
+        ]
     }
 ]
